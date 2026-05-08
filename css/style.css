@@ -338,6 +338,15 @@ body {
 }
 
 @media (min-width: 768px) {
+    html, 
+    body, 
+    a, 
+    button, 
+    .tile, 
+    ion-icon,
+    .copy-mail {
+        cursor: none !important;
+    }
     .grid {
         grid-template-columns: repeat(2, 1fr);
         gap: var(--grid-gap);
