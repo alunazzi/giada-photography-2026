@@ -370,6 +370,24 @@ body {
     align-items: center;
 }
 
+.viewer-content {
+    /* CHANGE: Re-added flex column to stack img and caption */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 90%;
+    max-height: 90%;
+}
+
+.viewer-content img {
+    max-width: 100%;
+    /* CHANGE: Reduced from 100vh to 80vh to make room for the text below */
+    max-height: 80vh; 
+    object-fit: contain;
+    box-shadow: 0 20px 80px rgba(0, 0, 0, 0.5);
+}
+
 .viewer-close {
     position: absolute; 
     top: 30px; 
