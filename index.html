@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <title>Giada Lunazzi</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <div id="cursor" class="cursor"></div>
+
+    <svg style="position: absolute; width: 0; height: 0; pointer-events: none;">
+      <filter id="lightDither">
+        <feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="4" result="noise" />
+        <feColorMatrix in="noise" type="matrix" values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 10 -4" result="softNoise" />
+        <feComposite in="softNoise" in2="SourceGraphic" operator="in" result="clippedNoise" />
+        <feFlood style="flood-color: var(--current-accent);" result="redBase" /> 
+        <feBlend in="clippedNoise" in2="redBase" mode="overlay" />
+        <feComposite in2="SourceGraphic" operator="in" />
+      </filter>
+    </svg>
+
+    <main class="container">
+        <header class="header">
+            <h1 class="bold-name">GIADA<br>LUNAZZI</h1>
+        </header>
+
+        <section class="grid">
+            <!-- 01 -->
+            <div class="tile reveal">
+                <div class="tile-badge badge-left">Unidentified Object Entering The Atmosphere And Disintegrating</div>
+                <div class="tile-badge badge-right">SPACE</div>
+                <img src="img/photo1.jpg" alt="Photography">
+            </div>
+
+            <!-- Text Tile 01 -->
+            <div class="tile reveal text-tile">
+                <p>My name is <span>GIADA LUNAZZI</span> and lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+
+            <!-- 02 Tall -->
+            <div class="tile reveal tall">
+                <div class="tile-badge badge-left">Boats' Greenlights</div>
+                <div class="tile-badge badge-right">PORTRAIT</div>
+                <img src="img/photo2.jpg" alt="Photography">
+            </div>
+
+            <!-- 03 -->
+            <div class="tile reveal">
+                <div class="tile-badge badge-left">Mount Fuji From Space</div>
+                <div class="tile-badge badge-right">NATURE</div>
+                <img src="img/photo3.jpg" alt="Photography">
+            </div>
+
+            <!-- 04 -->
+            <div class="tile reveal">
+                <div class="tile-badge badge-left">04</div>
+                <div class="tile-badge badge-right">NATURE</div>
+                <img src="img/photo4.jpg" alt="Photography">
+            </div>
+
+            <!-- 05 -->
+            <div class="tile reveal">
+                <div class="tile-badge badge-left">05</div>
+                <div class="tile-badge badge-right">NATURE</div>
+                <img src="img/photo5.jpg" alt="Photography">
+            </div>
+
+            <!-- Text Tile 02 -->
+            <div class="tile reveal text-tile">
+                <p>I have been immortalizing momements since <span>2009</span>. These are some of my shots. </p>
+            </div>
+
+            <!-- 06 -->
+            <div class="tile reveal">
+                <div class="tile-badge badge-left">06</div>
+                <div class="tile-badge badge-right">NATURE</div>
+                <img src="img/photo6.jpg" alt="Photography">
+            </div>
+
+            <!-- 07 -->
+            <div class="tile reveal">
+                <div class="tile-badge badge-left">07</div>
+                <div class="tile-badge badge-right">NATURE</div>
+                <img src="img/photo7.jpg" alt="Photography">
+            </div>
+
+            <!-- Text Tile 03 -->
+            <div class="tile reveal text-tile">
+                <p>Liking my work so far? Let's <a href="#" class="dynamic-mail">TALK</a>! <ion-icon name="copy-sharp" class="copy-mail" title="Copy email"></ion-icon></p>
+            </div>
+
+            <!-- 08 -->
+            <div class="tile reveal">
+                <div class="tile-badge badge-left">08</div>
+                <div class="tile-badge badge-right">NATURE</div>
+                <img src="img/photo8.jpg" alt="Photography">
+            </div>
+        </section>
+
+        <footer class="footer reveal">
+            <!-- Sinistra: Testo -->
+            <div class="footer-col footer-left">
+                <p>Available for commissions</p>
+            </div>
+
+            <!-- Centro: Icone Social -->
+            <div class="footer-col footer-center">
+                <div class="social-links">
+                    <a href="https://instagram.com" target="_blank"><ion-icon name="logo-instagram" title="Instagram"></ion-icon></a>
+                    <a href="https://linkedin.com" target="_blank"><ion-icon name="logo-linkedin" title="Linkedin"></ion-icon></a>
+                    <a href="https://facebook.com" target="_blank"><ion-icon name="logo-facebook" title="Facebook"></ion-icon></a>
+                    <a href="https://flickr.com" target="_blank"><ion-icon name="logo-flickr" title="Flickr"></ion-icon></a>
+                </div>
+            </div>
+
+            <!-- Destra: Contatto e Copia -->
+            <div class="footer-col footer-right">
+                <div class="contact-group">
+                    <a href="#" class="dynamic-mail link-with-icon">
+                        <ion-icon name="mail-sharp" title="MailTo, this will open your email client"></ion-icon>
+                        Contact Me
+                    </a>
+                    <ion-icon name="copy-sharp" class="copy-mail" title="Copy email"></ion-icon>
+                </div>
+            </div>
+        </footer>
+    </main>
+
+    <div id="viewer" class="viewer">
+        <span class="viewer-close">&times;</span>
+        <div class="viewer-content">
+            <img id="viewer-img" src="" alt="">
+            <p id="viewer-caption" class="viewer-caption"></p>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
