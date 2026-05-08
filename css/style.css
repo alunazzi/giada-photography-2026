@@ -322,6 +322,18 @@ body {
         flex: none;
         justify-content: center;
     }
+    .tile-badge, 
+    .text-tile p, 
+    .footer {
+        opacity: 1 !important;
+    }
+    .text-tile span, 
+    .text-tile a {
+        color: var(--lighter-accent);
+    }
+    .bold-name {
+        filter: url(#lightDither) brightness(1.4) contrast(1.2);
+    }
 }
 
 @media (min-width: 768px) {
