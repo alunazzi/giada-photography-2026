@@ -383,9 +383,18 @@ body {
 .viewer-content img {
     max-width: 100%;
     /* CHANGE: Reduced from 100vh to 80vh to make room for the text below */
-    max-height: 80vh; 
+    max-height: 70vh; 
     object-fit: contain;
-    box-shadow: 0 20px 80px rgba(0, 0, 0, 0.5);
+}
+
+.viewer-caption {
+    margin-top: 30px; /* Increased space from 20px */
+    font-weight: 300; /* Set to 300 as requested */
+    font-size: 1rem;
+    color: var(--text);
+    text-align: center;
+    max-width: 600px;
+    opacity: 0.8; /* Slight fade to keep it elegant */
 }
 
 .viewer-close {
