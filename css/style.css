@@ -311,6 +311,18 @@ body {
     .cursor {
         display: none !important;
     }
+    .tile-badge, 
+    .text-tile p, 
+    .footer {
+        opacity: 1 !important;
+    }
+    .social-links a, 
+    .link-with-icon, 
+    .copy-mail,
+    .text-tile a {
+        color: var(--accent) !important;
+        transform: none !important; /* Rimuove ingrandimenti non voluti */
+    }
     .footer {
         flex-direction: column;
         gap: 40px;
@@ -321,11 +333,6 @@ body {
     .footer-col {
         flex: none;
         justify-content: center;
-    }
-    .tile-badge, 
-    .text-tile p, 
-    .footer {
-        opacity: 1 !important;
     }
 }
 
