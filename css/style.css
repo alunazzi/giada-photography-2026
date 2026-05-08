@@ -319,9 +319,10 @@ body {
     .social-links a, 
     .link-with-icon, 
     .copy-mail,
-    .text-tile a {
+    .text-tile a,
+    .text-tile span {
         color: var(--accent) !important;
-        transform: none !important; /* Rimuove ingrandimenti non voluti */
+        transform: none !important; /* Prevent hover scaling on touch */
     }
     .footer {
         flex-direction: column;
