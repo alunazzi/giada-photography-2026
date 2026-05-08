@@ -327,10 +327,6 @@ body {
     .footer {
         opacity: 1 !important;
     }
-    .text-tile span, 
-    .text-tile a {
-        color: var(--lighter-accent);
-    }
 }
 
 @media (min-width: 768px) {
