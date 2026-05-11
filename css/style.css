@@ -358,6 +358,9 @@ body {
         grid-row: span 2;
         height: 100%;
     }
+    .wide {
+        grid-column: span 2;
+    }    
 }
 
 @media (min-width: 1600px) {
