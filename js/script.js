@@ -29,11 +29,28 @@ document.addEventListener('DOMContentLoaded', () => {
         cursor.style.top = e.clientY + 'px';
     });
 
-    // 3. Cursor Hover Effects
-    const interactives = document.querySelectorAll('a, button, .tile, .viewer-close, .text-tile p, .copy-mail, ion-icon');
+    // 3. Cursor Hover (Updated for independent text elements)
+    // CHANGE: Removed '.tile' and '.text-tile p' from the global selector 
+    const interactives = document.querySelectorAll('a, button, .viewer-close, .copy-mail, ion-icon');
     interactives.forEach(el => {
         el.addEventListener('mouseenter', () => cursor.classList.add('active'));
         el.addEventListener('mouseleave', () => cursor.classList.remove('active'));
+    });
+    
+    // CHANGE: Handle image tiles and text paragraphs separately
+    document.querySelectorAll('.tile').forEach(tile => {
+        // Only apply the big cursor to the whole tile if it is NOT a text tile
+        if (!tile.classList.contains('text-tile')) {
+            tile.addEventListener('mouseenter', () => cursor.classList.add('active'));
+            tile.addEventListener('mouseleave', () => cursor.classList.remove('active'));
+        } else {
+            // For text tiles, target the paragraph text inside precisely
+            const textParagraph = tile.querySelector('p');
+            if (textParagraph) {
+                textParagraph.addEventListener('mouseenter', () => cursor.classList.add('active'));
+                textParagraph.addEventListener('mouseleave', () => cursor.classList.remove('active'));
+            }
+        }
     });
 
     // 4. Viewer Logic
